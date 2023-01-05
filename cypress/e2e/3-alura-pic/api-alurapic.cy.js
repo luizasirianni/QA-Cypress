@@ -1,3 +1,4 @@
+<reference types="cypress" />
 const cypressConfig = require("../../../cypress.config")
 
 describe('Buscar fotos e dados', ()=> {
