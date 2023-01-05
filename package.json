@@ -1,0 +1,14 @@
+{
+  "name": "qa",
+  "version": "1.0.0",
+  "description": "primeiro projeto com cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open"
+  },
+  "author": "Luiza S",
+  "license": "ISC",
+  "devDependencies": {
+    "mochawesome": "^7.1.3"
+  }
+}
