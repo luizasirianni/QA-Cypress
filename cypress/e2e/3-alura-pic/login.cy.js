@@ -1,11 +1,11 @@
 describe('Login de usuarios', () => {
 
     beforeEach(() => {
-        cy.visit('https://alura-fotos.herokuapp.com/')
+        cy.visit('/')
     })
 
     it('fazer login de usuario valido', () => {
-        cy.login('flavio', '123') //verificar arquivo gui_commands.js e e2e.js
+        cy.login(Cypress.env('userName'), Cypress.env('password')) //verificar arquivo gui_commands.js e e2e.js
         //tambem pode ser usado para o botao:
         //cy.get('button[type="submit"]').click();
         cy.contains('a', '(Logout)').should('be.visible');

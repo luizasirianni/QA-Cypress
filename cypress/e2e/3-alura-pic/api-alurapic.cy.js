@@ -3,6 +3,8 @@ const cypressConfig = require("../../../cypress.config")
 describe('Buscar fotos e dados', ()=> {
 
     it('buscar fotos flavio', ()=>{
+
+        const tempoEsperado = Math.random() * 2000;
         cy.request({
             method: 'GET',
             url: 'https://apialurapic.herokuapp.com/flavio/photos'
@@ -11,6 +13,7 @@ describe('Buscar fotos e dados', ()=> {
             expect(res.body).is.not.empty //espera que o array de fotos não esteja vazio
             expect(res.body[0]).to.have.property('description') //espera que o array na posicao 0 tenha descrição
             expect(res.body[0].description).to.be.equal('Farol iluminado') //espera que a descrição do array na posição 0 seja 'Farol iluminado'
+            //expect(res.duration).to.be.lte(tempoEsperado); //espera que o tempo seja menor que o tempo esperado
         })
     }) 
 

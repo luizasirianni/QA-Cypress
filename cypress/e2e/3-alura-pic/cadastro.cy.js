@@ -1,7 +1,7 @@
 describe('Testes de usabilidade homepage', () => {
 
     beforeEach(() => {
-        cy.visit('https://alura-fotos.herokuapp.com/')
+        cy.visit('/')
     })
 
         it('verifica mensagens de email invalido', () => {
